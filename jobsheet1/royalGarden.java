@@ -1,3 +1,4 @@
+package jobsheet1;
 public class royalGarden {
      public static void main(String[] args) {
     int[][] stock = {
