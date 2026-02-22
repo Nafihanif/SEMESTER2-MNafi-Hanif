@@ -27,13 +27,13 @@ public class mahasiswa17 {
 
     String perfomeValue () {
         if (GPA >= 3.5) {
-            return "Excellent";
+            return "very good performance";
         } else if (GPA >= 3.0) {
-            return "Good";
+            return "good performance";
         } else if (GPA >= 2.0) {
-            return "Average";
+            return "performance is sufficient";
         } else {
-            return "Poor";
+            return "less performance";
         }
     }
 }
