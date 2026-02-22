@@ -1,6 +1,6 @@
 package jobsheet2;
 
-public class StudentMain {
+public class StudentMain17 {
     public static void main(String [] args){
 
         mahasiswa17 mhs1 = new mahasiswa17();
