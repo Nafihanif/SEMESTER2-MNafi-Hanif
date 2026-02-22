@@ -17,5 +17,8 @@ public class StudentMain {
         mahasiswa17 mhs2 = new mahasiswa17("Annisa Nabila", "2141720160" , 3.25 , "TI 2L");
         mhs2.updateGPA(3.30);
         mhs2.displayInformation();
+
+        mahasiswa17 mhsNafi = new mahasiswa17("Muhamad Nafi' Hanif", "254107020182", 4.00, "TI Internasional");
+        mhsNafi.displayInformation();
     }
 }
