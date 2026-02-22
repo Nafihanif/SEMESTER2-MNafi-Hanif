@@ -4,7 +4,20 @@ public class mahasiswa17 {
     String nim;
     String name;
     String Class;
-    Double GPA;
+    double GPA;
+
+    public mahasiswa17() {
+        // This is a constructor without parameters, it will be called when an object is created without passing any arguments
+    }
+
+    public mahasiswa17(String nm, String nim, double GPA, String Cls) {
+        name = nm;
+        this.nim = nim;
+        this.GPA = GPA;
+        Class = Cls;
+        // If the parameter name is the same as the attribute name, then to refer to the attribute
+        // variable the syntax of this is added in front of the attribute name
+    }
 
     void displayInformation() {
         System.out.println("NIM: " + nim);
