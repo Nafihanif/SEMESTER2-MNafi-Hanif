@@ -23,14 +23,19 @@ public class StudentDemo {
             System.out.println("----------------------------------");
         }
 
-        for (int i = 0; i <3; i++){
+        for (int i = 0; i<3; i++){
             System.out.println("STUDENT DATA (" + (i+1) + ")");
-            System.out.println("NIM      : " + arrayOfStudent[i].NIM);
-            System.out.println("Name     : " + arrayOfStudent[i].Name);
-            System.out.println("Class    : " + arrayOfStudent[i].Class);
-            System.out.println("GPA      : " + arrayOfStudent[i].RGB);
+            arrayOfStudent[i].printInfo();
             System.out.println("----------------------------------");
         }
+        // for (int i = 0; i <3; i++){
+        //     System.out.println("STUDENT DATA (" + (i+1) + ")");
+        //     System.out.println("NIM      : " + arrayOfStudent[i].NIM);
+        //     System.out.println("Name     : " + arrayOfStudent[i].Name);
+        //     System.out.println("Class    : " + arrayOfStudent[i].Class);
+        //     System.out.println("GPA      : " + arrayOfStudent[i].RGB);
+        //     System.out.println("----------------------------------");
+        // }
         sc.close();
     }
 }
