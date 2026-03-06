@@ -5,7 +5,7 @@ public class LecturerMain {
         
         System.out.println("=== OBJECT 1 (Default Constructor) ===");
         // Instantiating object using the default constructor [cite: 267-268]
-        Lecturer17 lec1 = new Lecturer17();
+        Lecturer16 lec1 = new Lecturer16();
         lec1.idLecturer = "L001";
         lec1.name = "Bapak Vivin, M.Kom";
         lec1.activeStatus = false;
@@ -21,7 +21,7 @@ public class LecturerMain {
 
         System.out.println("=== OBJECT 2 (Parameterized Constructor) ===");
         // Instantiating object using the parameterized constructor [cite: 267-268]
-        Lecturer17 lec2 = new Lecturer17("L002", "Ibu Tika, S.T., M.T.", true, 2020, "Algorithms and Data Structures");
+        Lecturer16 lec2 = new Lecturer16("L002", "Ibu Tika, S.T., M.T.", true, 2020, "Algorithms and Data Structures");
         
         // Calling methods [cite: 269]
         lec2.showInformation();
