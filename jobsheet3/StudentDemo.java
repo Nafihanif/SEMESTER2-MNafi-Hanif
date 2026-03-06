@@ -1,40 +1,36 @@
 package jobsheet3;
-
+import java.util.Scanner;
 public class StudentDemo {
     public static void main(String[] args) {
-        Student18[] arrayOfStudent =new Student18[3];
-        arrayOfStudent[0] = new Student18();
-        arrayOfStudent[0].NIM = "244107060033";
-        arrayOfStudent[0].Name = "AGNES TITANIA KINANTI";
-        arrayOfStudent[0].Class = "SIB-1E";
-        arrayOfStudent[0].RGB = (float) 3.75;
+        Scanner sc = new Scanner(System.in);
+        Student16[] arrayOfStudent =new Student16[3];
+        String dummy;
 
-        arrayOfStudent[1] = new Student18();
-        arrayOfStudent[1].NIM = "2341720172";
-        arrayOfStudent[1].Name = "ACHMAD MAULANA HAMZAH";
-        arrayOfStudent[1].Class = "TI-2A";
-        arrayOfStudent[1].RGB = (float) 3.36;
+        for (int i = 0; i <3; i++){
+            arrayOfStudent[i] = new Student16();
+            
+            System.out.println("ENTER STUDENT DATA (" + (i+1) + ")");
+            System.out.print("STUDENT NIM   : ");
+            arrayOfStudent[i].NIM = sc.nextLine();
+            System.out.print("STUDENT NAME  : ");
+            arrayOfStudent[i].Name = sc.nextLine();
+            System.out.print("STUDENT CLASS : ");
+            arrayOfStudent[i].Class =  sc.nextLine();
+            System.out.print("STUDENT GPA   : ");
+            dummy = sc.nextLine();  
+            arrayOfStudent[i].RGB = Float.parseFloat(dummy);
+            // arrayOfStudent[i].RGB = sc.nextFloat(); ???
+            System.out.println("----------------------------------");
+        }
 
-        arrayOfStudent[2] = new Student18();
-        arrayOfStudent[2].NIM = "244107023006";
-        arrayOfStudent[2].Name = "DIRHAMAWAN PUTRNATO";
-        arrayOfStudent[2].Class = "TI-2E";
-        arrayOfStudent[2].RGB = (float) 3.80;
-
-        System.out.println("NIM      : " + arrayOfStudent[0].NIM);
-        System.out.println("Name     : " + arrayOfStudent[0].Name);
-        System.out.println("Class    : " + arrayOfStudent[0].Class);
-        System.out.println("GPA      : " + arrayOfStudent[0].RGB);
-        System.out.println("----------------------------------");
-        System.out.println("NIM      : " + arrayOfStudent[1].NIM);
-        System.out.println("Name     : " + arrayOfStudent[1].Name);
-        System.out.println("Class    : " + arrayOfStudent[1].Class);
-        System.out.println("GPA      : " + arrayOfStudent[1].RGB);
-        System.out.println("----------------------------------");
-        System.out.println("NIM      : " + arrayOfStudent[2].NIM);
-        System.out.println("Name     : " + arrayOfStudent[2].Name);
-        System.out.println("Class    : " + arrayOfStudent[2].Class);
-        System.out.println("GPA      : " + arrayOfStudent[2].RGB);
-        System.out.println("----------------------------------");
+        for (int i = 0; i <3; i++){
+            System.out.println("STUDENT DATA (" + (i+1) + ")");
+            System.out.println("NIM      : " + arrayOfStudent[i].NIM);
+            System.out.println("Name     : " + arrayOfStudent[i].Name);
+            System.out.println("Class    : " + arrayOfStudent[i].Class);
+            System.out.println("GPA      : " + arrayOfStudent[i].RGB);
+            System.out.println("----------------------------------");
+        }
+        sc.close();
     }
 }
