@@ -9,36 +9,41 @@ public class lecturerDemo16 {
         int sumOfLecturer = sc.nextInt();
         sc.nextLine(); // Consume the newline character after reading the integer
 
-        lecturer16 []arrayOfLecturer = new lecturer16[sumOfLecturer];// Create an array of lecturer16 objects
+        // initiate an array of lecturer16 objects with the size of sumOfLecturer
+        lecturer16 []arrayOfLecturer = new lecturer16[sumOfLecturer];
 
         System.out.println("===== INPUT LECTURER DATA =====");
         for (int i = 0; i < sumOfLecturer; i++) {
             System.out.println("Data lecture (" + (i + 1) + ")");
             System.out.print("CODE             : ");
             String code = sc.nextLine();
+
             System.out.print("NAME             : ");
             String name = sc.nextLine();
-            System.out.print("GENDER Man/woman : ");
-            String inputGender = sc.nextLine();
 
+            System.out.print("GENDER Man/Woman : ");
+            String inputGender = sc.nextLine();
             boolean gender = inputGender.equalsIgnoreCase("Man");
 
             System.out.print("AGE              : ");
             int age = sc.nextInt();
-            sc.nextLine(); // Consume the newline character after reading the integer
+            sc.nextLine(); 
+            // Consume the newline character after reading the integer
+
             System.out.println("----------------------------------");
 
             arrayOfLecturer[i] = new lecturer16(code, name, gender, age);
         }
 
-        System.out.println("\n===== DISPLAY LECTURER DATA =====");
-        for (lecturer16 lctr : arrayOfLecturer) {
-            System.out.println("CODE   : " + lctr.code);
-            System.out.println("NAME   : " + lctr.name);
-            System.out.println("GENDER : " + (lctr.gender ? "Man" : "Woman"));
-            System.out.println("AGE    : " + lctr.age);
-            System.out.println("----------------------------------");
-        }
+        // Displaying the results 
+        // calling the methods to process the data
+        System.out.println("\n===============================================\n");
+        lecturerData16 dataProcessor = new lecturerData16();
+        dataProcessor.allLecturerData(arrayOfLecturer);
+        dataProcessor.numberOfLecturersByGender(arrayOfLecturer);
+        dataProcessor.averageAgeOfLecturersEachGender(arrayOfLecturer);
+        dataProcessor.oldestLecturer(arrayOfLecturer);
+        dataProcessor.youngestLecturer(arrayOfLecturer);
 
         sc.close();
     }   
