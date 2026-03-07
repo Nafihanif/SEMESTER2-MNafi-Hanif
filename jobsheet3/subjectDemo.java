@@ -3,11 +3,18 @@ import java.util.Scanner;
 public class subjectDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        subject16 []arrayOfSubject = new subject16[3];
+
+        System.out.println("===== INPUT SUBJECT DATA =====");
+        System.out.print("INPUT SUM OF SUBJECT DO YOU NEED : ");
+        int sumOfSubject = scanner.nextInt();
+        scanner.nextLine(); 
+        // Consume the newline character after reading the integer
+        
+        subject16 []arrayOfSubject = new subject16[sumOfSubject];
         String code, name, dummy;
         int SKS, sumOftime;
-        
-        for (int i =0; i < 3; i++){
+
+        for (int i =0; i < sumOfSubject; i++){
             System.out.println("ENTER SUBJECT DATA (" + (i+1) + "):");
             System.out.print("SUBJECT CODE : ");
             code = scanner.nextLine();
@@ -26,22 +33,12 @@ public class subjectDemo {
             }
 
             System.out.println("\n===== SUBJECT DATA RESULT =====");
-            for (int i = 0; i < 3; i++){
+            for (int i = 0; i < sumOfSubject; i++){
                 System.out.println("SUBJECT DATA (" + (i+1) + "):");
                 
                 // call method printInfo to display subject data
                 arrayOfSubject[i].printInfo();
-            }
-
-        //     for (int i = 0; i < 3; i++){
-        //         System.out.println("SUBJECT DATA (" + (i+1) + "):");
-        //         System.out.println("SUBJECT CODE : " + arrayOfSubject[i].code);
-        //         System.out.println("SUBJECT NAME : " + arrayOfSubject[i].name);
-        //         System.out.println("SUBJECT SKS  : " + arrayOfSubject[i].SKS);
-        //         System.out.println("SUBJECT SUM OF TIME : " + arrayOfSubject[i].sumOftime);
-        //         System.out.println("----------------------------------");
-        // }
-        
+            }        
         scanner.close();
     }
 }
