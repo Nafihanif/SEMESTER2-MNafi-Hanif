@@ -20,8 +20,28 @@ public class subjectDemo {
             dummy = scanner.nextLine();
             sumOftime = Integer.parseInt(dummy);
             System.out.println("----------------------------------"); 
-            
-            arrayOfSubject[i] = new subject16(code, name, SKS, sumOftime);
-        }
+
+            arrayOfSubject[i] = new subject16();
+            arrayOfSubject[i].addData(code, name, SKS, sumOftime);
+            }
+
+            System.out.println("\n===== SUBJECT DATA RESULT =====");
+            for (int i = 0; i < 3; i++){
+                System.out.println("SUBJECT DATA (" + (i+1) + "):");
+                
+                // call method printInfo to display subject data
+                arrayOfSubject[i].printInfo();
+            }
+
+        //     for (int i = 0; i < 3; i++){
+        //         System.out.println("SUBJECT DATA (" + (i+1) + "):");
+        //         System.out.println("SUBJECT CODE : " + arrayOfSubject[i].code);
+        //         System.out.println("SUBJECT NAME : " + arrayOfSubject[i].name);
+        //         System.out.println("SUBJECT SKS  : " + arrayOfSubject[i].SKS);
+        //         System.out.println("SUBJECT SUM OF TIME : " + arrayOfSubject[i].sumOftime);
+        //         System.out.println("----------------------------------");
+        // }
+        
+        scanner.close();
     }
 }
