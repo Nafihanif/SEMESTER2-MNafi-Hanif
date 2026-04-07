@@ -78,7 +78,7 @@ public class lecturerData16 {
 
 // Method 5 : to display the yougest lecturer
     public void youngestLecturer (lecturer16[] arrayOfLecturer){
-        if (arrayOfLecturer.length == 0)return;
+        if (arrayOfLecturer.length == 0)return;// to minimize error when the array is empty
         
         lecturer16 youngest = arrayOfLecturer[0];
         for (lecturer16 lctr : arrayOfLecturer){
