@@ -6,7 +6,8 @@ public class MainStudent {
         Scanner s1 = new Scanner(System.in);
 
         SearchStudent data = new SearchStudent();
-        int amountStudent = 5 ;
+        System.out.print("Enter the number of students: ");
+        int amountStudent = s.nextInt();
 
         System.out.println("-----------------------------");
         System.out.println("input student accordingly from smallet NIM");
@@ -39,6 +40,15 @@ public class MainStudent {
         data.showPosition(search, position);
 
         data.showData(search, position);
+        
+        System.out.println("=============================");
+        System.out.print("search student by NIM: ");
+        System.out.println("Using binary Search");
+        int positionl = data.FindBinarySearch(search, 0, amountStudent - 1);
+
+        data.showPosition(search, positionl);
+
+        data.showData(search, positionl);
         
     s.close();
     s1.close();

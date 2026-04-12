@@ -46,8 +46,23 @@ public class SearchStudent {
             System.out.println("Age \t :" + listStd[pos].age);
             System.out.println("IPK \t :" + listStd[pos].gpa);
         }else{
-            System.out.println("Data " + x + "is not found");
+            System.out.println("Data " + x + " is not found");
         }
+    }
+
+    public int FindBinarySearch(int search, int left, int right){
+        int mid;
+        if (right >= left){
+            mid = (left + right)/2;
+            if (search == listStd[mid].nim){
+                return (mid);
+            } else if (listStd[mid].nim > search){
+                return FindBinarySearch(search, left, mid - 1);
+            } else {
+                return FindBinarySearch(search, mid + 1, right);
+            }
+        }
+        return -1;
     }
 
 }
