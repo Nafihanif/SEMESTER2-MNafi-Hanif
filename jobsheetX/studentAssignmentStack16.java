@@ -60,4 +60,31 @@ public class studentAssignmentStack16 {
         }
         System.out.println("");
     }
+
+    public Student16 peekFirst() {
+        if (!isEmpty()) {
+            return stack[0]; // the first element pushed is always at index 0
+        } else {
+            System.out.println("Stack is empty!");
+            return null;
+        }
+    }
+
+    public int getCount(){
+        return top + 1; //Since 'top' starts at -1, we add 1 to get the actual count
+    }
+
+    String convertToBinary(int grade){
+        ConversionStack16 stack = new ConversionStack16();
+        while (grade > 0) {
+            int mod = grade % 2;
+            stack.push(mod);
+            grade = grade / 2;
+        }
+        String binary = "";
+        while (!stack.isEmpty()) {
+            binary += stack.pop();
+        }
+        return binary;
+    }
 }
