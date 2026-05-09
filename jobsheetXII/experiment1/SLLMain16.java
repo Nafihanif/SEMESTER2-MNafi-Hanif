@@ -35,9 +35,24 @@ public class SLLMain16 {
         System.out.println("== ALL LINKED LIST DATA SUMMARY ==");
         System.out.println("==================================");
         sll.print();
+        System.out.println();
+
+        System.out.println("Data at index 1 is: ");
+        Student16 data = sll.getData(1);
+        data.print();
+
+        int idx = sll.indexOf("Student 1");
+        System.out.println("Student 1 is located at index: " +idx);
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
+        sll.print();
 
         sc.close();
 
+        // === code before ===
         // Student16 std1 = new Student16("001", "Student 1", "TI-1I",3.89);
         // Student16 std2 = new Student16("002", "Student 2", "TI-1I",3.45);
         // Student16 std3 = new Student16("003", "Student 3", "TI-1I",3.20);
